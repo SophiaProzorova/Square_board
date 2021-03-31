@@ -23,13 +23,15 @@ function SquareBlock({countSquare, boardArray}) {
                         <Square key= {index} id = {index} addPath={addBlockToTrack} />) 
                 }
             </div>
-            <div className="pathInfo">
+            <div className="path">
                 <h2>Hover squares</h2>
-                {
-                    mouseTrack.map( value => {
-                        return <div className="pathIndex"> row: <span>{value.row}</span>  column: <span>{value.column}</span></div>
-                    })
-                }
+                <div className="pathInfo">
+                    {
+                        mouseTrack.map( value => {
+                            return <div className="pathIndex"> row: <span>{value.row}</span>  column: <span>{value.column}</span></div>
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
